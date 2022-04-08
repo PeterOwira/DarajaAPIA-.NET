@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mpesa_setupModelStoreContainer" CdmEntityContainer="mpesa_setupEntities">
+    <EntitySetMapping Name="DarajaApiCredentials">
+      <EntityTypeMapping TypeName="mpesa_setupModel.DarajaApiCredential">
+        <MappingFragment StoreEntitySet="DarajaApiCredentials">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientSecret" ColumnName="ClientSecret" />
+          <ScalarProperty Name="GrantType" ColumnName="GrantType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MpesaExpressSetups">
+      <EntityTypeMapping TypeName="mpesa_setupModel.MpesaExpressSetup">
+        <MappingFragment StoreEntitySet="MpesaExpressSetup">
+          <ScalarProperty Name="ExpressID" ColumnName="ExpressID" />
+          <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+          <ScalarProperty Name="PassKey" ColumnName="PassKey" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CustomerPhoneNo" ColumnName="CustomerPhoneNo" />
+          <ScalarProperty Name="Callbackurl" ColumnName="Callbackurl" />
+          <ScalarProperty Name="AccountReference" ColumnName="AccountReference" />
+          <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MpesaCallBackDatas">
+      <EntityTypeMapping TypeName="mpesa_setupModel.MpesaCallBackData">
+        <MappingFragment StoreEntitySet="MpesaCallBackData">
+          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ReceiptNumber" ColumnName="ReceiptNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

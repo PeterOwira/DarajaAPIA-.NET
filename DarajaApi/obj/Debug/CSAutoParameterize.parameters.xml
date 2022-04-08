@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="mpesa_setupEntities-Web.config Connection String" description="mpesa_setupEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.DarajaModel.csdl|res://*/Models.DarajaModel.ssdl|res://*/Models.DarajaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-NDTCTAI7\SQLEXPRESS;initial catalog=mpesa_setup;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Visual_Studio\ 2019\\DarajaApi\\DarajaApi\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='mpesa_setupEntities']/@connectionString" />
+  </parameter>
+</parameters>

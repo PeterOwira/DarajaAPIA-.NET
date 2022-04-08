@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mpesa_setupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DarajaApiCredentials">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClientSecret" Type="nvarchar" MaxLength="50" />
+    <Property Name="GrantType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MpesaExpressSetup">
+    <Key>
+      <PropertyRef Name="ExpressID" />
+    </Key>
+    <Property Name="ExpressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShortCode" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="PassKey" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="CustomerPhoneNo" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Callbackurl" Type="nvarchar(max)" />
+    <Property Name="AccountReference" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransactionDescription" Type="nvarchar(max)" />
+    <Property Name="TransactionType" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="mpesa_setupModelStoreContainer">
+    <EntitySet Name="DarajaApiCredentials" EntityType="Self.DarajaApiCredentials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MpesaExpressSetup" EntityType="Self.MpesaExpressSetup" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

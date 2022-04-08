@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="mpesa_setupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DarajaApiCredentials">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClientSecret" Type="nvarchar" MaxLength="50" />
+          <Property Name="GrantType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MpesaCallBackData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReceiptNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="TransactionDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MpesaExpressSetup">
+          <Key>
+            <PropertyRef Name="ExpressID" />
+          </Key>
+          <Property Name="ExpressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShortCode" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PassKey" Type="nvarchar(max)" />
+          <Property Name="Amount" Type="int" />
+          <Property Name="CustomerPhoneNo" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Callbackurl" Type="nvarchar(max)" />
+          <Property Name="AccountReference" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransactionDescription" Type="nvarchar(max)" />
+          <Property Name="TransactionType" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="mpesa_setupModelStoreContainer">
+          <EntitySet Name="DarajaApiCredentials" EntityType="Self.DarajaApiCredentials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MpesaCallBackData" EntityType="Self.MpesaCallBackData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MpesaExpressSetup" EntityType="Self.MpesaExpressSetup" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="mpesa_setupModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DarajaApiCredential">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClientSecret" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GrantType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MpesaExpressSetup">
+          <Key>
+            <PropertyRef Name="ExpressID" />
+          </Key>
+          <Property Name="ExpressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShortCode" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PassKey" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="CustomerPhoneNo" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Callbackurl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AccountReference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="mpesa_setupEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DarajaApiCredentials" EntityType="Self.DarajaApiCredential" />
+          <EntitySet Name="MpesaExpressSetups" EntityType="Self.MpesaExpressSetup" />
+          <EntitySet Name="MpesaCallBackDatas" EntityType="mpesa_setupModel.MpesaCallBackData" />
+        </EntityContainer>
+        <EntityType Name="MpesaCallBackData">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReceiptNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="Int32" />
+          <Property Name="TransactionDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="mpesa_setupModelStoreContainer" CdmEntityContainer="mpesa_setupEntities">
+          <EntitySetMapping Name="DarajaApiCredentials">
+            <EntityTypeMapping TypeName="mpesa_setupModel.DarajaApiCredential">
+              <MappingFragment StoreEntitySet="DarajaApiCredentials">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="ClientSecret" ColumnName="ClientSecret" />
+                <ScalarProperty Name="GrantType" ColumnName="GrantType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MpesaExpressSetups">
+            <EntityTypeMapping TypeName="mpesa_setupModel.MpesaExpressSetup">
+              <MappingFragment StoreEntitySet="MpesaExpressSetup">
+                <ScalarProperty Name="ExpressID" ColumnName="ExpressID" />
+                <ScalarProperty Name="ShortCode" ColumnName="ShortCode" />
+                <ScalarProperty Name="PassKey" ColumnName="PassKey" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="CustomerPhoneNo" ColumnName="CustomerPhoneNo" />
+                <ScalarProperty Name="Callbackurl" ColumnName="Callbackurl" />
+                <ScalarProperty Name="AccountReference" ColumnName="AccountReference" />
+                <ScalarProperty Name="TransactionDescription" ColumnName="TransactionDescription" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MpesaCallBackDatas">
+            <EntityTypeMapping TypeName="mpesa_setupModel.MpesaCallBackData">
+              <MappingFragment StoreEntitySet="MpesaCallBackData">
+                <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="ReceiptNumber" ColumnName="ReceiptNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
