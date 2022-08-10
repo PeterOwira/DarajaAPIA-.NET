@@ -1,0 +1,15 @@
+{
+  "TransactionType": "Pay Bill",
+  "TransID": "QDN11KYO2P",
+  "TransTime": "20220423154905",
+  "TransAmount": "50.00",
+  "BusinessShortCode": "600980",
+  "BillRefNumber": "Shop1",
+  "InvoiceNumber": "",
+  "OrgAccountBalance": "10003036.00",
+  "ThirdPartyTransID": "",
+  "MSISDN": "254705912645",
+  "FirstName": "NICHOLAS",
+  "MiddleName": "Nicholas",
+  "LastName": "SONGOK"
+}

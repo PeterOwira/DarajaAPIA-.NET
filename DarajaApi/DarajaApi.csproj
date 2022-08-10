@@ -244,9 +244,13 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountBalanceController.cs" />
+    <Compile Include="Controllers\B2CController.cs" />
+    <Compile Include="Controllers\C2BController.cs" />
     <Compile Include="Controllers\DarajaAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MpesaExpressController.cs" />
+    <Compile Include="Controllers\TransactionStatusController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -359,8 +363,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AccountBalance\" />
+    <Folder Include="Views\B2C\" />
+    <Folder Include="Views\C2B\" />
     <Folder Include="Views\DarajaApi\" />
     <Folder Include="Views\MpesaExpress\" />
+    <Folder Include="Views\TransactionStatus\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

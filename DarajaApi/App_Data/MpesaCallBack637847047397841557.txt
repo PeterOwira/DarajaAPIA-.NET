@@ -1,0 +1,10 @@
+{
+  "Body": {
+    "stkCallback": {
+      "MerchantRequestID": "24803-68152645-2",
+      "CheckoutRequestID": "ws_CO_040420222125588938",
+      "ResultCode": 1037,
+      "ResultDesc": "DS timeout."
+    }
+  }
+}

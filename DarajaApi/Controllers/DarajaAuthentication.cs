@@ -18,15 +18,15 @@ namespace DarajaApi.Controllers
         }
 
         //Access token for Authorization Daraja          
-        public static string DarajaAuthentication()
+        public static string DarajaAuthentication(int number)
         {
             using (mpesa_setupEntities dbContext = new mpesa_setupEntities())
             {
 
 
-                string client_id = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == 1).ClientId.ToString();
-                string client_secret = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == 1).ClientSecret.ToString();
-                string grant_type = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == 1).GrantType.ToString();
+                string client_id = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == number).ClientId.ToString();
+                string client_secret = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == number).ClientSecret.ToString();
+                string grant_type = dbContext.DarajaApiCredentials.FirstOrDefault(e => e.ID == number).GrantType.ToString();
 
 
                 string plaincredentials = client_id + ":" + client_secret;
