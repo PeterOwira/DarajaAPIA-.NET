@@ -18,11 +18,11 @@ namespace DarajaApi.Controllers
         {
             var data_object = new {
                 InitiatorName = "testapi",
-                SecurityCredential = "FYOY4GzobdTHzNpNweeReHB8FxAK9ybSUmUUoQ9Jq93OcNMhsNBzaUGsheyAaHSTzeOwKxReql3pdPfqu9xPe7uaTtzV6VXp4VtTgZBF6Pu5D2hcy99IFLMTcs2y/wZnmEXtYrMJNgn9UfPuoHzTZYjzlIsAFp8Eyw/KFNYl+FZMFkkv9M7TKbChcSZaZwYH49rvBgHmjFSQdMv24+8jJRlFjLH0voLy7i/r6zZLqGBrdcX+fr3pqvmTgnM/3USF2xXZoL9HPIaU+Uk4FNVuKKxT/18xsTYMes2DMKZF+2FR3B3jnVllcaT5iAu5D/eOt7CieE02n/PLSothWTQ6Gg==",
+                SecurityCredential = "",
                 CommandID = "SalaryPayment",
                 Amount = 1000,
                 PartyA = 600998,
-                PartyB = 254708374149,
+                PartyB = 0,
                 Remarks = "Test remarks",
                 QueueTimeOutURL = "https://cb83-41-90-182-80.ngrok.io/api/daraja/transactionstatus/queue",
                 ResultURL = "https://cb83-41-90-182-80.ngrok.io/api/daraja/b2cconfirmation",
