@@ -26,7 +26,7 @@ namespace DarajaApi.Controllers
             var data_object = new
             {
                 Initiator = "testapi",
-                SecurityCredential = "gXEwe7pDAqD0Z9VcAL2WJ2YxnM1fz0R8mQKHuY//jxyRZacf7FAp1SCzo9nSiiCEPfGteRW/EEpMHCvcVROWWdCc94jLxGf//Y2mh3PthmBi+XBGeEda3Afcy70Khdn+zr92FPu1dj9rzSKsPu2pfLsjV5K8UUyXJVv9SYsR3Q4DRR4znyMetgrZres7gyXBDC0Tc+jyWaVsg0dU2l7nuthZ92XH/qYyOFwSHMZg3CNCkxmftr3AozeWD/2cr9F+aINzHRiSVijxIVaBdwJcLDZkddktj6ppZpse3OFX57nEjwuFLxw6viXSGRfmralm9JstdAqSHrCo6y8WRh/01w==",
+                SecurityCredential = "",
                 CommandID = "TransactionStatusQuery",
                 TransactionID = transactionID,
                 PartyA = 600997,
