@@ -166,35 +166,6 @@ namespace DarajaApi.Controllers
             }
         }
 
-  //      [HttpGet]
-  //      [Route("api/daraja/transactionstatus")]
-  //      public IHttpActionResult TransactionQuery(string transactionID) {
-  //          var client = new RestClient("https://sandbox.safaricom.co.ke/mpesa/transactionstatus/v1/query");
-  //          var request = new RestRequest(Method.POST);
-  //          request.AddHeader("Content-Type", "application/json");
-  //          string token = DarajaController.DarajaAuthentication();
-  //          string bearer_token = "Bearer "+token;
-  //          request.AddHeader("Authorization", bearer_token);
-  //          var data_object = new
-  //          {
-  //  Initiator = "testapi",
-  //  SecurityCredential= "fffBKEs0NA+8CVBQPBR0CVSq/bky9CYm4eewq0rJjDwANR962Ne8nbzzAt0QssmGWKNOe7DHEp3iOYs9VrpA8B+LbqMGy2o2gvWrPrKtw9VhVlslB3CvOi6Yc6wyYbND3NfdEWHp3GUAC+GEC0wJS7B2V4prkFJhvsDd5pQz8scfGgzH1CLzUMh5+pX4RABRKGDWPvJUQHBwVq1A+5kPryxvRMMz3Jd6IbrbVelaJ/75KflSpul9exM621Fn41MkGPWAMU6s+POURPaa5GOs+PHGt1MGt9skP/X3Co+14eb5DY0eS5xHuxBJ96G0jJV8HC6EPZP26GAOVQxidDdSww==",
-  //  CommandID= "TransactionStatusQuery",
-  //  TransactionID= transactionID,
-  //  PartyA= 174379,
-  //  IdentifierType= "4",
-  //  ResultURL= "https://mydomain.com/TransactionStatus/result/",
-  //  QueueTimeOutURL= "https://mydomain.com/TransactionStatus/queue/",
-  //  Remarks= "Daraja",
-  //  Occassion= "daraja",
-  //};
 
-  //          var data_string = new JavaScriptSerializer().Serialize(data_object);
-
-
-  //          request.AddParameter("application/json", data_string, ParameterType.RequestBody);
-  //          IRestResponse response = client.Execute(request);
-  //          return Ok(response.Content);
-  //      }
     }
 }
